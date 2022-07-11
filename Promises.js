@@ -9,11 +9,13 @@ myPromise
   .catch(error => {
 
   })
+//_____________________________________________
 
 fetch('https://jsonplaceholder.typicode.com/todos')
   .then(response => response.json())
   .then(json => console.log(json))
   .catch(error => console.error(error))
+//_____________________________________________
 
 fetch('https://jsonplaceholder.typicode.com/todos')
   .then(response => {
@@ -22,6 +24,7 @@ fetch('https://jsonplaceholder.typicode.com/todos')
   })
   .then(json => console.log(json))
   .catch(error => console.error(error))
+//_____________________________________________
 
 const getData = (url) =>
   new Promise ((resolve, reject) => {
@@ -34,3 +37,4 @@ const getData = (url) =>
 getData('https://jsonplaceholder.typicode.com/todos')
   .then(data => console.log(data))
   .catch(error => console.log(error.message))
+//_____________________________________________
